@@ -53,7 +53,7 @@ void showAllRecords(int fieldCount)
 	FILE *fp_account = fopen(recordsFileName, "r");
 	while (fread(fieldscontent, sizeof(fieldscontent), 1, fp_account))
 	{
-		printf("\nCustomer %d details are:\n",counter);
+		printf("\nCustomer %d details are:\n", counter);
 		for (int counter = 0; counter < fieldCount; counter++)
 		{	
 			printf("%s is    %s\n", fieldNames[counter], fieldscontent[counter]);			
@@ -78,7 +78,7 @@ void createRecord(int fieldCount)
 	
 	for (int counter = 0; counter < fieldCount; counter++)
 	{
-		printf("Enter %s: ",fieldNames[counter]);
+		printf("Enter %s: ", fieldNames[counter]);
 		fgets(fieldsContent[counter], sizeof(fieldsContent[counter]), stdin);
 		removenewline(fieldsContent[counter]);	
 	}
@@ -91,7 +91,7 @@ void updateRecord(int fieldCount)
 {
 	char actualIdNumber[fieldValueSize];
 	char recordValues[fieldCount][fieldValueSize];
-	printf("Enter %s: ",fieldNames[0]);
+	printf("Enter %s: ", fieldNames[0]);
 	scanf("%s", actualIdNumber);
 	fflush(stdin);
 	FILE *fp_account = fopen(recordsFileName, "r+");
@@ -161,3 +161,4 @@ int fieldCount()
 	fclose(fp_field);
 	return fieldCounter;
 }
+
