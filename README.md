@@ -16,12 +16,12 @@ Perfect for demos, projects, and real‑world applications. Easy to use, fast to
 ## 📖 Quick Start
 Clone the repo:
 
-git clone https://github.com/your-username/crud-framework.git
-cd crud-framework
+git clone https://github.com/JaiServanaBhava/FRAMEWORK.git
+cd FRAMEWORK
 
 Compile and run:
-gcc main.c -o crud
-./crud
+gcc framework.c -o framework
+./framework
 
 ---
 
