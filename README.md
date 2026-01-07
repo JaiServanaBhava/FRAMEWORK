@@ -15,7 +15,7 @@ Perfect for demos, projects, and real‑world applications. Easy to use, fast to
 
 ## 📖 Quick Start
 Clone the repo:
-```bash
+
 git clone https://github.com/your-username/crud-framework.git
 cd crud-framework
 
@@ -24,6 +24,7 @@ gcc main.c -o crud
 ./crud
 
 ---
+
 ## ⭐ Support
 If this project helps you, please **star ⭐ the repo** and share it with your friends!
 
