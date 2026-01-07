@@ -15,6 +15,7 @@ Perfect for demos, projects, and real‑world applications. Easy to use, fast to
 
 ## 📖 Quick Start
 Clone the repo:
+```bash
 
 git clone https://github.com/JaiServanaBhava/FRAMEWORK.git
 cd FRAMEWORK
@@ -22,7 +23,7 @@ cd FRAMEWORK
 Compile and run:
 gcc framework.c -o framework
 ./framework
-
+```
 ---
 
 ## ⭐ Support
