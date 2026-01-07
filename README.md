@@ -23,7 +23,7 @@ Compile and run:
 gcc main.c -o crud
 ./crud
 
-
+---
 ## ⭐ Support
 If this project helps you, please **star ⭐ the repo** and share it with your friends!
 
