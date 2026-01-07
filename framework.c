@@ -50,8 +50,8 @@ void showAllRecords(int fieldCount)
 	char fieldscontent[fieldCount][fieldValueSize];
 	int counter = 1;
 	system("cls");
-	FILE *fp_account = fopen(recordsFileName, "r");
-	while (fread(fieldscontent, sizeof(fieldscontent), 1, fp_account))
+	FILE *fp_record = fopen(recordsFileName, "r");
+	while (fread(fieldscontent, sizeof(fieldscontent), 1, fp_record))
 	{
 		printf("\nCustomer %d details are:\n", counter);
 		for (int counter = 0; counter < fieldCount; counter++)
@@ -62,19 +62,19 @@ void showAllRecords(int fieldCount)
 	}
 	printf("\n");
 	
-	fclose(fp_account);
+	fclose(fp_record);
 }
 
 void deleteAllRecord()
 {
-	FILE *fp_accounts = fopen(recordsFileName, "w");
-	fclose(fp_accounts);
+	FILE *fp_record = fopen(recordsFileName, "w");
+	fclose(fp_record);
 }
 
 void createRecord(int fieldCount)
 {
 	char fieldsContent[fieldCount][fieldValueSize];
-	FILE *fp_account = fopen(recordsFileName, "a");
+	FILE *fp_record = fopen(recordsFileName, "a");
 	
 	for (int counter = 0; counter < fieldCount; counter++)
 	{
@@ -82,8 +82,8 @@ void createRecord(int fieldCount)
 		fgets(fieldsContent[counter], sizeof(fieldsContent[counter]), stdin);
 		removenewline(fieldsContent[counter]);	
 	}
-	fwrite(fieldsContent, sizeof(fieldsContent), 1, fp_account);
-	fclose(fp_account);
+	fwrite(fieldsContent, sizeof(fieldsContent), 1, fp_record);
+	fclose(fp_record);
 	system("cls");
 }
 
@@ -94,9 +94,9 @@ void updateRecord(int fieldCount)
 	printf("Enter %s: ", fieldNames[0]);
 	scanf("%s", actualIdNumber);
 	fflush(stdin);
-	FILE *fp_account = fopen(recordsFileName, "r+");
+	FILE *fp_record = fopen(recordsFileName, "r+");
 
-	while (fread(recordValues, sizeof(recordValues), 1, fp_account))
+	while (fread(recordValues, sizeof(recordValues), 1, fp_record))
 	{
 		if(strcmp(actualIdNumber, recordValues[0]) == 0)
 		{
@@ -111,9 +111,9 @@ void updateRecord(int fieldCount)
 			printf("Enter new %s", fieldNames[choice - 1]);
 			fgets(recordValues[choice - 1], sizeof(recordValues[choice]), stdin);
 			removenewline(recordValues[choice - 1]);
-			fseek(fp_account, - sizeof(recordValues), SEEK_CUR);
-			fwrite(recordValues, sizeof(recordValues), 1, fp_account);
-			fclose(fp_account);
+			fseek(fp_record, - sizeof(recordValues), SEEK_CUR);
+			fwrite(recordValues, sizeof(recordValues), 1, fp_record);
+			fclose(fp_record);
 		}
 	}
 
@@ -161,4 +161,5 @@ int fieldCount()
 	fclose(fp_field);
 	return fieldCounter;
 }
+
 
