@@ -23,20 +23,14 @@ Compile and run:
 gcc main.c -o crud
 ./crud
 
-⭐ Support
-If this project helps you, please star ⭐ the repo and share it with your friends!
 
-👨‍💻 Author
-Made with ❤️ by Your Name
+## ⭐ Support
+If this project helps you, please **star ⭐ the repo** and share it with your friends!
 
 ---
 
-👉 Just replace **`Your Name`** with your actual name, and **`your-username`** with your GitHub username.  
-
-Would you like me to also add a **stylized ASCII art banner** at the very top (like a big “CRUD FRAMEWORK” logo) so your README instantly grabs attention?
-
-
-
+## 👨‍💻 Author
+Made with ❤️ by **Jai Servana Bhava**
 
 
 
